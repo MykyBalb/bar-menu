@@ -1,0 +1,52 @@
+---
+
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Seo Cabral Butiquim</title>
+    </head>
+    <body>
+        <slot />
+    </body>
+</html>
+
+<style is:global>
+    :root {
+        --primary-red: #ad1c11;
+        --primary-green: #125b22;
+        --primary-text: #17260f;
+        --background: #f2f1e8;
+        --card: #ebe9d8;
+        --emphasis: #d4a231;
+        --border: #d1cfbd;
+    }
+
+    [data-theme="dark"] {
+        --bg-dark: #0d120b;
+        --card-dark: #171e14;
+        --text-dark: #e4e8df;
+        --text-secondary: #9ba392;
+        --border-dark: #2c3628;
+    }
+
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: linear-gradient(
+            to bottom right,
+            var(--primary-red) 50%,
+            var(--primary-green) 50%
+        );
+        color: white;
+        height: 100dvh;
+    }
+</style>
