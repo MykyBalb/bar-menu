@@ -1,12 +1,28 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro"
-import Section from "@/components/Section.astro"
-import Navigation from "@/components/Navigation.astro"
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Section from "@/components/Section.astro";
+import Navigation from "@/components/Navigation.astro";
+import Portions from "@/components/menu-items/Portions.astro";
 ---
 
 <BaseLayout>
 	<Section />
 	<Navigation />
+	<div>
+		<Portions />
+	</div>
 </BaseLayout>
 
+<style lang="scss">
+	div {
+		background: var(--primary-red);
+		border-radius: 10px;
+		padding: 20px;
+		margin: 15px;
+		margin-top: 5%;
 
+		@media screen and (max-width: 500px) {
+			margin-top: 10%;
+		}
+	}
+</style>
