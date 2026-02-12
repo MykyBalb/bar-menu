@@ -14,6 +14,7 @@
         <li>Drinks</li>
         <li>Drinks Sem Álcool</li>
     </ul>
+    <hr />
 </nav>
 
 <style lang="scss">
@@ -21,11 +22,9 @@
 
     nav {
         margin: 0;
-        background-color: var(--background);
-        color: var(--primary-text);
+        color: var(--text-dark);
 
         ul {
-            background-color: var(--card);
             overflow: auto;
             white-space: nowrap;
             padding: 10px;
@@ -33,17 +32,18 @@
             text-align: center;
 
             li {
-                border: 1px solid rgba(23, 38, 15, 0.3);
+                background-color: var(--primary-green);
                 border-radius: 5px;
-                padding: 5px;
-                font-weight: bold;
+                padding: 10px;
+                font-weight: 550;
+                transition: ease 0.3s;
 
                 &:not(:last-child) {
                     margin-right: 15px;
                 }
 
                 &:hover {
-                    background-color: #cfcfcd;
+                    background-color: rgba(58, 135, 96, 0.8);
                     cursor: pointer;
                 }
             }
@@ -52,6 +52,28 @@
         ul li {
             display: inline-block;
             text-align: center;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background-color: var(--primary-green);
+            width: 90%;
+            margin: 0 auto;
+            mask-image: linear-gradient(
+                to right,
+                transparent,
+                black 20%,
+                black 80%,
+                transparent
+            );
+            -webkit-mask-image: linear-gradient(
+                to right,
+                transparent,
+                black 20%,
+                black 80%,
+                transparent
+            );
         }
     }
 </style>
